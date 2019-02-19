@@ -2,7 +2,11 @@
 
 Hi! thanks for taking the time to check out my code.
 
-- To test this project, simply run "npm start" in the terminal to spin up the webpack-dev-server.
+- To test this project:
+
+  1. \$ npm i
+  2. \$ npm start
+  3. navigate to localhost:8080
 
 - Home page displays all tokens
 
