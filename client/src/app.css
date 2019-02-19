@@ -1,0 +1,28 @@
+.token-parent {
+  position: relative;
+  text-align: center;
+}
+
+.centered-parent {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.centered-child {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.token-container {
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
