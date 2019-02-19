@@ -38,7 +38,6 @@ class Home extends Component {
     const favorites = this.props.favorites;
     const tokenArr = [];
     const favoriteArr = [];
-    console.log("favorites: ", favoriteArr);
 
     for (let key in tokens) {
       const token_name = tokens[key].name;
