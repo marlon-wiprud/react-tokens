@@ -3,7 +3,8 @@ import * as types from "../actions/actionTypes";
 const initialState = {
   tokens: {},
   single_token: {},
-  favorites: {}
+  favorites: {},
+  createTokenText: ""
 };
 
 function mainReducer(state = initialState, action) {
@@ -27,32 +28,31 @@ function mainReducer(state = initialState, action) {
       });
     }
 
+    case types.CREATE_TOKEN_SUCCESS: {
+      return Object.assign({}, state, {
+        createTokenText: "Success!"
+      });
+    }
+
     case types.SAVE_NAME: {
-      console.log("name: ", action.payload);
       return Object.assign({}, state, {
         new_token_name: action.payload
       });
     }
 
     case types.SAVE_PRICE: {
-      console.log("price: ", action.payload);
-
       return Object.assign({}, state, {
         new_token_price: action.payload
       });
     }
 
     case types.SAVE_SYMBOL: {
-      console.log("symbol: ", action.payload);
-
       return Object.assign({}, state, {
         new_token_symbol: action.payload
       });
     }
 
     case types.SAVE_VOLUME: {
-      console.log("volume: ", action.payload);
-
       return Object.assign({}, state, {
         new_token_volume: action.payload
       });

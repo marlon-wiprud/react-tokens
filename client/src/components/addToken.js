@@ -10,7 +10,8 @@ const mapStateToProps = state => {
     new_token_name: store.new_token_name,
     new_token_price: store.new_token_price,
     new_token_symbol: store.new_token_symbol,
-    new_token_volume: store.new_token_volume
+    new_token_volume: store.new_token_volume,
+    createTokenText: store.createTokenText
   };
 };
 
@@ -95,6 +96,7 @@ class AddToken extends Component {
               <Button variant="primary" type="submit">
                 Submit
               </Button>
+              <p>{this.props.createTokenText}</p>
             </Form>
           </div>
         </div>

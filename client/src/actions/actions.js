@@ -43,7 +43,6 @@ export const saveTokenId = id => ({
 
 export const createToken = (name, price, symbol, volume) => {
   return dispatch => {
-    console.log(name, price, symbol, volume);
     const data = { name, symbol, volume, price };
     fetch("https://roll-76f98.firebaseio.com/tokens.json", {
       method: "POST",
@@ -53,10 +52,16 @@ export const createToken = (name, price, symbol, volume) => {
       },
       body: JSON.stringify(data)
     })
-      .then(res => console.log("POST RESPONSE: ", res))
+      .then(res => {
+        dispatch(createTokenSuccess());
+      })
       .catch(err => console.log("ERROR: ", err));
   };
 };
+
+export const createTokenSuccess = () => ({
+  type: types.CREATE_TOKEN_SUCCESS
+});
 
 export const saveName = name => ({
   type: types.SAVE_NAME,
